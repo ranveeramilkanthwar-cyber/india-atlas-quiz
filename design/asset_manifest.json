@@ -1,0 +1,58 @@
+[
+  {
+    "id": "city_pin_marker",
+    "name": "Target City Pin",
+    "art_style": "modern-vector",
+    "category": null,
+    "media_type": "image_other",
+    "description": "Target City Pin",
+    "aspect_ratio": "1:1",
+    "usage": "UI legend badge and active target city marker accent on the quiz interface.",
+    "chroma_key": true,
+    "prompt": "True 90-degree orthogonal overhead view, looking straight down. A minimalist sleek tall teardrop-shaped cartographic location pin icon, narrow tapered bottom point and wide rounded circular top, flat calm mineral teal shell with a crisp deep charcoal slate outline and clean ivory circular center dot, centered with generous empty space around it.",
+    "actions": null,
+    "resolution": null
+  },
+  {
+    "id": "bgm_cartography",
+    "name": "Atlas Discovery Theme",
+    "art_style": "modern-vector",
+    "category": null,
+    "media_type": "music",
+    "description": "Atlas Discovery Theme",
+    "aspect_ratio": "1:1",
+    "usage": "Continuous ambient background music loop during menu, active quiz, and summary screens.",
+    "chroma_key": false,
+    "prompt": "86 BPM, calm and uplifting instrumental geography quiz theme, soft wooden marimba arpeggios, warm ambient synthesizer pads, gentle felt piano chords, subtle light brushed shaker rhythm, bright C major tonality, clean modern production, strictly instrumental, seamless loop",
+    "actions": null,
+    "resolution": null
+  },
+  {
+    "id": "atlas_backdrop",
+    "name": "Cartographic Atlas Backdrop",
+    "art_style": "modern-vector",
+    "category": null,
+    "media_type": "image_background",
+    "description": "Cartographic Atlas Backdrop",
+    "aspect_ratio": "16:9",
+    "usage": "Full-viewport backdrop rendered behind the precision vector map of India and state boundaries.",
+    "chroma_key": false,
+    "prompt": "True 90-degree orthogonal overhead view, looking straight down. A desaturated, low-contrast deep midnight-slate ocean cartography chart with faint thin teal latitude and longitude grid lines, subtle soft bathymetric wave contours, and calm dark slate shading evenly across the entire frame, no landmasses, no text, no icons.",
+    "actions": null,
+    "resolution": null
+  },
+  {
+    "id": "compass_rose_icon",
+    "name": "Cartographic Compass Rose",
+    "art_style": "modern-vector",
+    "category": null,
+    "media_type": "image_other",
+    "description": "Cartographic Compass Rose",
+    "aspect_ratio": "1:1",
+    "usage": "Decorative directional compass HUD emblem anchored in the corner of the map viewport.",
+    "chroma_key": true,
+    "prompt": "True 90-degree orthogonal overhead view, looking straight down. A minimalist symmetrical circular geometric compass rose emblem with clean crisp thin vector lines and four faceted directional points in deep charcoal slate and calm mineral teal, flat modern aesthetic, centered with generous empty space around the circular outer ring.",
+    "actions": null,
+    "resolution": null
+  }
+]
