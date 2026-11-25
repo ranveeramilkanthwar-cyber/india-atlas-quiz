@@ -4,7 +4,6 @@ import {
   Award,
   Compass,
   HelpCircle,
-  Map,
   MapPin,
   Menu,
   Play,
@@ -24,7 +23,6 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import LeafletMap from './LeafletMap';
 import {getConfig, THEME} from './constants';
 import {
   createIndiaProjection,
@@ -251,7 +249,6 @@ export default function App() {
   const [isHowToPlayOpen, setIsHowToPlayOpen] = useState(false);
   const [isMusicMuted, setIsMusicMuted] = useState(false);
   const [isSfxMuted, setIsSfxMuted] = useState(() => gameAudio.getMuteState());
-  const [mapMode, setMapMode] = useState<'leaflet' | 'canvas'>('leaflet');
 
   // --- REFS FOR 60FPS CANVAS & PHYSICS ENGINE ANIMATION ---
   const sliderPhysicsRef = useRef({
@@ -1631,21 +1628,6 @@ export default function App() {
         </div>
 
         <div className="flex items-center gap-2">
-          {/* Map Mode Switcher (Leaflet Real Map vs Atlas Canvas) */}
-          <button
-            type="button"
-            onClick={() => {
-              gameAudio.playCrispClick();
-              setMapMode((m) => (m === 'leaflet' ? 'canvas' : 'leaflet'));
-            }}
-            aria-label="Toggle Map View"
-            className="min-h-[40px] px-3.5 py-1.5 rounded-xl bg-[#FFFFFF] hover:bg-[#E0F0EE]/70 active:scale-[0.98] border border-[#1E7F74]/35 text-[#1E7F74] text-xs font-bold flex items-center gap-1.5 shadow-[0_2px_8px_rgba(30,127,116,0.08)] transition-all cursor-pointer">
-            <Map className="w-4 h-4 text-[#1E7F74]" />
-            <span>
-              {mapMode === 'leaflet' ? 'Real Leaflet Map' : 'Atlas Canvas Map'}
-            </span>
-          </button>
-
           {/* Top-Right Exclusive Menu Trigger */}
           <button
             type="button"
@@ -1661,38 +1643,28 @@ export default function App() {
         </div>
       </header>
 
-      {/* CENTRAL MAP VIEWPORT (Leaflet Real Map with accurate state boundaries or Atlas Canvas Map) */}
+      {/* CENTRAL MAP VIEWPORT (Atlas Sovereign Canvas Map) */}
       <div
         ref={canvasWrapperRef}
         className="flex-1 w-full min-h-0 flex items-center justify-center relative bg-[#F6F4EF] overflow-hidden">
-        {mapMode === 'leaflet' ? (
-          <LeafletMap
-            cityA={activeQuestion?.cityA}
-            cityB={activeQuestion?.cityB}
-            actualKm={activeQuestion?.actualKm}
-            guessKm={guessKm}
-            turnPhase={turnPhase}
+        {assetsReady && (
+          <canvas
+            ref={canvasRef}
+            width={canvasWidth}
+            height={canvasHeight}
+            style={
+              fittedCanvasSize
+                ? {
+                    width: `${fittedCanvasSize.width}px`,
+                    height: `${fittedCanvasSize.height}px`,
+                  }
+                : {
+                    aspectRatio: `${canvasWidth} / ${canvasHeight}`,
+                    width: `min(100%, calc(100vh * ${canvasWidth} / ${canvasHeight}))`,
+                  }
+            }
+            className="h-auto max-w-full max-h-full block"
           />
-        ) : (
-          assetsReady && (
-            <canvas
-              ref={canvasRef}
-              width={canvasWidth}
-              height={canvasHeight}
-              style={
-                fittedCanvasSize
-                  ? {
-                      width: `${fittedCanvasSize.width}px`,
-                      height: `${fittedCanvasSize.height}px`,
-                    }
-                  : {
-                      aspectRatio: `${canvasWidth} / ${canvasHeight}`,
-                      width: `min(100%, calc(100vh * ${canvasWidth} / ${canvasHeight}))`,
-                    }
-              }
-              className="h-auto max-w-full max-h-full block"
-            />
-          )
         )}
       </div>
 
