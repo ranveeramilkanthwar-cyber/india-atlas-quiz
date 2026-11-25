@@ -1,0 +1,59 @@
+{
+  "title": "India Atlas",
+  "language": [
+    "en"
+  ],
+  "hook": "Measure distances across Indian cities",
+  "game_overview": "Explore an interactive map of India with state and city boundaries, estimating distances between random cities on a 0\u20136000 km slider.",
+  "artstyle": "modern-vector",
+  "genre": "trivia",
+  "winning_condition": "Complete all randomly drawn quiz questions (between 5 and 10 per round) and maximize your total rating across every 1000-point challenge.",
+  "losing_condition": "There is no elimination fail state; finishing the quiz with low accuracy yields a lower total rating out of the round maximum.",
+  "player_mode": "single_player",
+  "supported_orientations": [
+    "landscape",
+    "portrait"
+  ],
+  "input_methods": [
+    "touch",
+    "mouse",
+    "keyboard"
+  ],
+  "score_options": {
+    "score_type": "points",
+    "score_order": "higher_is_better"
+  },
+  "low_end_device_support": true,
+  "mobile_playable": true,
+  "tv_playable": false,
+  "content_descriptors": [],
+  "controls": [
+    {
+      "input": "Mouse Drag / Touch Drag on 0\u20136000 km Slidebar Arrow",
+      "action": "Slide the arrow indicator across the 0\u20136000 km range to select the estimated distance."
+    },
+    {
+      "input": "Numeric KM Input Box (Keyboard)",
+      "action": "Type exact kilometers (0\u20136000) directly; stays synchronized with the slider bar."
+    },
+    {
+      "input": "Left / Right Arrow Keys (Hold Shift for 100 km steps)",
+      "action": "Fine-tune the distance slider value in 10 km or 100 km increments."
+    },
+    {
+      "input": "Enter Key / Submit Button",
+      "action": "Lock in the distance estimate, reveal the straight-line measurement on the map, and award rating points."
+    },
+    {
+      "input": "Virtual Touch Step Buttons (Mobile Only)",
+      "action": "Tap -100 / -10 / +10 / +100 km buttons on mobile devices to fine-tune the slider."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Visual Hierarchy & Layering",
+      "content": "Strict 3-Color Minimalist Light Palette: 1. Warm Alabaster / Soft Ivory (#F6F4EF / #FAF9F6) for the open ocean backdrop, elevated India landmass, and crisp HUD cards, with muted warm sand (#EAE6DC) for neighboring countries. 2. Deep Charcoal Slate (#1E293B) for crisp typography, hairline state and international boundary strokes, slider ticks, and precision markers. 3. Calm Mineral Teal (#1E7F74 with soft #E0F0EE wash) for active city boundary rings, the 0\u20136000 km sliding arrow control, primary action buttons, and the post-answer straight-line reveal. Airy whitespace, 1px hairline borders, and clean tabular typography create a serene, distraction-free cartographic experience.",
+      "summary": "Minimalist 3-color light aesthetic pairing warm alabaster, deep charcoal slate, and mineral teal."
+    }
+  ]
+}
