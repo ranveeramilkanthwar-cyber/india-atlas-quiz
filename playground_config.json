@@ -1,0 +1,86 @@
+{
+  "schema": [
+    {
+      "name": "minQuestionsPerQuiz",
+      "type": "number",
+      "label": "Min Questions Per Quiz",
+      "default": 5,
+      "min": 3,
+      "max": 10,
+      "step": 1
+    },
+    {
+      "name": "maxQuestionsPerQuiz",
+      "type": "number",
+      "label": "Max Questions Per Quiz",
+      "default": 10,
+      "min": 5,
+      "max": 15,
+      "step": 1
+    },
+    {
+      "name": "perfectAccuracyThreshold",
+      "type": "number",
+      "label": "1000-Pt Accuracy Threshold (%)",
+      "default": 90,
+      "min": 75,
+      "max": 99,
+      "step": 1
+    },
+    {
+      "name": "maxQuestionRating",
+      "type": "number",
+      "label": "Max Rating Per Question",
+      "default": 1000,
+      "min": 500,
+      "max": 2000,
+      "step": 100
+    },
+    {
+      "name": "keyboardStepKm",
+      "type": "number",
+      "label": "Arrow Key Step (km)",
+      "default": 10,
+      "min": 5,
+      "max": 50,
+      "step": 5
+    },
+    {
+      "name": "keyboardShiftStepKm",
+      "type": "number",
+      "label": "Shift+Arrow Key Step (km)",
+      "default": 100,
+      "min": 50,
+      "max": 500,
+      "step": 50
+    },
+    {
+      "name": "defaultMusicVolume",
+      "type": "number",
+      "label": "Default Music Volume",
+      "default": 0.2,
+      "min": 0,
+      "max": 1,
+      "step": 0.05
+    },
+    {
+      "name": "defaultSfxVolume",
+      "type": "number",
+      "label": "Default SFX Volume",
+      "default": 0.6,
+      "min": 0,
+      "max": 1,
+      "step": 0.1
+    }
+  ],
+  "values": {
+    "minQuestionsPerQuiz": 5,
+    "maxQuestionsPerQuiz": 10,
+    "perfectAccuracyThreshold": 90,
+    "maxQuestionRating": 1000,
+    "keyboardStepKm": 10,
+    "keyboardShiftStepKm": 100,
+    "defaultMusicVolume": 0.2,
+    "defaultSfxVolume": 0.6
+  }
+}
